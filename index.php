@@ -1,40 +1,57 @@
-<!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page - AsistenteTaxonomico</title>
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/site.css">
-</head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="https://localhost:44380/">AsistenteTaxonomico</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="https://localhost:44380/">Inicio</a></li>
-                    <li><a href="https://localhost:44380/Home/About">Acerca de</a></li>
-                    <li><a href="https://localhost:44380/Home/Contact">Contacto</a></li>
-                </ul>
-                
+<?php include('header.php'); ?>
 
-    <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://localhost:44380/Account/Register">Registro</a></li>
-        <li><a href="https://localhost:44380/Account/Login">Iniciar sesión</a></li>
-    </ul>
-
+<div class="row">
+    <div class="col-md-4">
+        <form id="frmSearch">
+            <h4></h4>
+            <hr />
+            <div class="form-group">
+                <label for="nivelOrganizacion">Nivel de organización</label>
+                <select id="nivelOrganizacion" name="nivelOrganizacion" class="form-control" />
+                    <option value=""></option>
+                    <option value="Unicelular">Unicelular</option>
+                    <option value="Colonia">Colonia</option>
+                </select>
             </div>
-        </div>
-    </nav>
-    <div class="container body-content">
-        
+            <div class="form-group">
+                <label for="Password"></label>
+                <input for="Password" class="form-control" />
+                <span validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="ConfirmPassword"></label>
+                <input for="ConfirmPassword" class="form-control" />
+                <span validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="button" id="btnBuscar" class="btn btn-default">Buscar</button>
+        </form>
+    </div>
+</div>
+
+<div class="row" style="margin-top:50px;">
+    <div class="col-md-12">
+        <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Genero</th>
+                <th>Familia</th>
+                <th>Clase</th>
+                <th>Tamaños referenciales</th>
+                <th>Nivel de organización</th>
+                <th>Formas</th>
+                <th>Caracter 1</th>
+                <th>Caracter 2</th>
+                <th>Caracter 3</th>
+                <th>Pared celular/Ornamentaciones</th>
+                <th>Nº de Cloroplastos/Forma</th>
+                <th>Pirenoides</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyResult">
+        </tbody>
+        </table>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-md-3">
@@ -77,15 +94,4 @@
         </ul>
     </div>
 </div>
-
-        <hr>
-        <footer>
-            <p>© 2017 - AsistenteTaxonomico</p>
-        </footer>
-    </div>
-
-    
-    <script src="lib/jquery/dist/jquery.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="js/site.js"></script>
-</body></html>
+<?php include('footer.php'); ?>
