@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page - AsistenteTaxonomico</title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/magicsuggest-min.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
