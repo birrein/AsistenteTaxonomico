@@ -90,10 +90,7 @@ var dataParedCelularOrnamentaciones = [
 $(function() {
     loadTbody();
 
-    $("#nivelOrganizacion").change(function() {
-        loadTbody();
-    });
-    $("#btnBuscar").click(function() {
+    $("#clase, #nivelOrganizacion").change(function() {
         loadTbody();
     });
 
@@ -123,6 +120,12 @@ $(function() {
     $(msParedCelularOrnamentaciones).on('selectionchange', function(e,m){
         loadTbody();
     });
+
+    $('.algaelist').on('click', '.showAlgaeInfo', function () {
+        var genero = $(this).data('genero');
+        $('#myModalLabel').text(genero);
+        $('#myModal').modal('show');
+    });
 });
 
 function loadTbody()
@@ -132,6 +135,6 @@ function loadTbody()
         data: $("#frmSearch").serializeArray(),
         // dataType: "dataType",
     }).done(function(d) {
-        $("#tbodyResult").html(d);
+        $(".algaelist").html(d);
     });
 }
