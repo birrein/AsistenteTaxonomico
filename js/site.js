@@ -124,12 +124,20 @@ $(function() {
     $('.algaelist').on('click', '.showAlgaeInfo', function () {
         var genero = $(this).data('genero');
         $('#myModalLabel').text(genero);
+
+        $.ajax({
+            url: "xhrGetModalBody.php?genero="+genero
+        }).done(function(d) {
+            $('.modal-body').html(d);
+        });
+
         $('#myModal').modal('show');
     });
 });
 
 function loadTbody()
 {
+    $(".algaelist").html('<img src="images/loading.gif">');
     $.ajax({
         url: "xhrLoadTbody.php",
         data: $("#frmSearch").serializeArray(),

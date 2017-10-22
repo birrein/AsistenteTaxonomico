@@ -37,3 +37,13 @@
 .list-details {
     margin-bottom: 30px;
 }
+
+.diagramas {
+    height: 130px;
+}
+
+.diagramas .img-responsive {
+    display: block;
+    width: auto;
+    max-height: 100%;
+}
