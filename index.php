@@ -19,7 +19,7 @@ include('class.algae.php');
                 </select>
             </div>
             <div class="form-group">
-                <label for="nivelOrganizacion">Nivel de organización</label>
+                <label for="nivelOrganizacion">Nivel de organizaci&oacute;n</label>
                 <select id="nivelOrganizacion" name="nivelOrganizacion" class="form-control" />
                     <option value=""></option>
                     <option value="Colonia">Colonia</option>
@@ -27,24 +27,76 @@ include('class.algae.php');
                 </select>
             </div>
             <div class="form-group">
-                <label for="formaCelula">Forma de la célula</label>
+                <label for="formaOrganizacion">Forma de la  organizaci&oacute;n</label>
+                <input id="formaOrganizacion" name="formaOrganizacion" class="form-control" placeholder="" />
+            </div>
+            <div class="form-group">
+                <label for="formaCelula">Forma de la c&eacute;lula</label>
                 <input id="formaCelula" name="formaCelula" class="form-control" placeholder="" />
             </div>
             <div class="form-group">
-                <label for="forma">Forma</label>
-                <input id="forma" name="forma" class="form-control" placeholder="" />
+                <label for="paredCelular">Pared celular</label>
+                <select id="paredCelular" name="paredCelular" class="form-control" />
+                    <option value=""></option>
+<?php
+                    $paredes = Algae::getParedCelularOpts();
+                    foreach ($paredes as $pared) {
+                        echo "<option value='".utf8_encode($pared)."'>".utf8_encode($pared)."</option>";
+                    }
+?>
+                </select>
             </div>
+
             <div class="form-group">
-                <label for="paredCelularOrnamentaciones">Pared Celular/Ornamentaciones</label>
-                <input id="paredCelularOrnamentaciones" name="paredCelularOrnamentaciones" class="form-control" placeholder="" />
+                <label for="paredCelularOrnamentaciones">Ornamentaciones de la pared celular</label>
+                <select id="paredCelularOrnamentaciones" name="paredCelularOrnamentaciones" class="form-control" />
+                    <option value=""></option>
+<?php
+                    $ornamentaciones = Algae::getParedCelularOrnamentaciones();
+                    foreach ($ornamentaciones as $ornamentacion) {
+                        echo "<option value='".utf8_encode($ornamentacion)."'>".utf8_encode($ornamentacion)."</option>";
+                    }
+?>
+                </select>
             </div>
+
             <div class="form-group">
-                <label for="nCloroplastosForma">N°de Cloroplastos/Forma</label>
-                <input id="nCloroplastosForma" name="nCloroplastosForma" class="form-control" />
+                <label for="cloroplastosN">N&uacute;mero de cloroplastos</label>
+                <select id="cloroplastosN" name="cloroplastosN" class="form-control" />
+                    <option value=""></option>
+<?php
+                    $numeros = Algae::getNCloroplastosOpts();
+                    foreach ($numeros as $numero) {
+                        echo "<option value='".utf8_encode($numero)."'>".utf8_encode($numero)."</option>";
+                    }
+?>
+                </select>
             </div>
+
             <div class="form-group">
-                <label for="Pirenoides">Pirenoides</label>
-                <input id="Pirenoides" name="Pirenoides" class="form-control" />
+                <label for="cloroplastosForma">Forma de cloroplastos</label>
+                <select id="cloroplastosForma" name="cloroplastosForma" class="form-control" />
+                    <option value=""></option>
+<?php
+                    $formas = Algae::getFormasCloroplastos();
+                    foreach ($formas as $forma) {
+                        echo "<option value='".utf8_encode($forma)."'>".utf8_encode($forma)."</option>";
+                    }
+?>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pirenoides">Pirenoides</label>
+                <select id="pirenoides" name="pirenoides" class="form-control" />
+                    <option value=""></option>
+<?php
+                    $pirenoides = Algae::getPirenoides();
+                    foreach ($pirenoides as $pirenoide) {
+                        echo "<option value='".utf8_encode($pirenoide)."'>".utf8_encode($pirenoide)."</option>";
+                    }
+?>
+                </select>
             </div>
         </form>
     </div>

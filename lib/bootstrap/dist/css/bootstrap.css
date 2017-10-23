@@ -8,6 +8,7 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+	  
 }
 body {
   margin: 0;
@@ -1086,7 +1087,9 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-image:url(http://amakaik.cl/AsistenteTaxonomico/images/fondohome.png);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
 }
 input,
 button,
@@ -1097,7 +1100,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #323d47;
   text-decoration: none;
 }
 a:hover,
@@ -1115,6 +1118,8 @@ figure {
 img {
   vertical-align: middle;
 }
+
+
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -1125,7 +1130,7 @@ img {
   height: auto;
 }
 .img-rounded {
-  border-radius: 6px;
+  border-radius: 0px;
 }
 .img-thumbnail {
   display: inline-block;
@@ -1245,8 +1250,11 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;
+  text-align:center;
+  background-color:#dedede;
+  border-radius:10px;
 }
 h4 small,
 .h4 small,
@@ -1947,6 +1955,8 @@ pre code {
   }
   .col-md-9 {
     width: 75%;
+	margin-top: 10px;
+    padding-top: 15px;
   }
   .col-md-8 {
     width: 66.66666667%;
@@ -4493,8 +4503,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #c8ecef;
+  border-color: #40a1a8;
 }
 .navbar-default .navbar-brand {
   color: #777;
