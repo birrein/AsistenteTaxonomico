@@ -28,7 +28,7 @@ $diagramas = Algae::getDiagramas($genero);
 <?php
         echo '<div class="row">';
         foreach ($diagramas as $d) {
-            echo '<div class="col-sm-3 diagramas" style="margin-bottom:15px;"><a href="'.$d.'" target="_blank"><img src="'.$d.'" class="img-responsive img-thumbnail"></a></div>';
+            echo '<div class="col-sm-3 diagramas" style="margin-bottom:15px;"><a href="javascript:void(0);" class="foto" data-imgsrc="'.$d.'"><img src="'.$d.'" class="img-responsive img-thumbnail"></a></div>';
         }
         echo '</div>';
 ?>
@@ -47,7 +47,7 @@ $diagramas = Algae::getDiagramas($genero);
             if (strpos($f, "thumbnail")) {
                 continue;
             }
-            echo '<div class="col-sm-3" style="margin-bottom:15px;"><a href="'.$f.'" target="_blank"><img src="'.$f.'" class="img-responsive img-thumbnail"></a></div>';
+            echo '<div class="col-sm-3" style="margin-bottom:15px;"><a href="javascript:void(0);" class="foto" data-imgsrc="'.$f.'"><img src="'.$f.'" class="img-responsive img-thumbnail"></a></div>';
         }
         echo '</div>';
 ?>

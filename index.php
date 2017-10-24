@@ -101,36 +101,21 @@ include('class.algae.php');
         </form>
     </div>
 
-    <div class="col-md-9 algaelist">
-        <!-- <div class="row">
-            <div class="col-md-4">
-                <div>
-                    <a href="javascript:void();"><img src="images/fotos/Asterionella/thumbnail.jpg" alt="" class="img-responsive img-rounded"></a>
-                </div>
-                <div>
-                    <h4><a href="javascript:void();">Asterionella</a></h4>
-                </div>
-            </div>
-            <div class="col-md-4"><img src="images/fotos/Ceratium/thumbnail.jpg" alt="" class="img-responsive img-rounded"></div>
-            <div class="col-md-4"><img src="images/fotos/Closterium/thumbnail.jpg" alt="" class="img-responsive img-rounded"></div>
-        </div>
-        <div class="row" style="margin-top:20px;">
-            <div class="col-md-4"><img src="images/fotos/Cosmarium/thumbnail.jpg" alt="" class="img-responsive img-rounded"></div>
-            <div class="col-md-4"><img src="images/fotos/Melosira/thumbnail.jpg" alt="" class="img-responsive img-rounded"></div>
-            <div class="col-md-4"><img src="images/fotos/Micrasterias/thumbnail.jpg" alt="" class="img-responsive img-rounded"></div>
-        </div> -->
+    <div class="col-md-9">
+        <div class="algaelist-title"><h3>G&eacute;nero:</h3></div>
+        <div class="algaelist"></div>
     </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalInfoLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel"></h4>
+                <h4 class="modal-title" id="myModalInfoLabel"></h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="myModalInfoBody">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -138,5 +123,15 @@ include('class.algae.php');
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog full-screen">
+        <div class="modal-content">         
+            <div class="modal-body" id="myModalBody">                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 
 <?php include('footer.php'); ?>

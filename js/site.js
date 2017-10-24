@@ -8,7 +8,7 @@
     'Con hemicélulas',
     'Colonia tipo filamento',
     'Incrustadas en el mucílago',
-    'Colonias formadas por 4, 8 o 12 células',  
+    'Formadas por 4, 8 o 12 células',  
     'Más largas que anchas',
     'contraídas en la región media',
     'Contorno subcircular',
@@ -19,6 +19,20 @@
 ];
 
 $(function() {
+
+    //fix para corregir sombra al agregar un segundo modal
+    $(document).on('show.bs.modal', '.modal', function () {
+        var zIndex = 1040 + (10 * $('.modal:visible').length);
+        $(this).css('z-index', zIndex);
+        setTimeout(function() {
+            $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+        }, 0);
+    });
+    //fix para corregir scroll al cerrar segundo modal, el primero no queda "scrolleable"
+    $(document).on('hidden.bs.modal', '.modal', function () {
+        $('.modal:visible').length && $(document.body).addClass('modal-open');
+    });
+
     loadTbody();
 
     $("#clase, #nivelOrganizacion, #paredCelular, #paredCelularOrnamentaciones, #cloroplastosN, #cloroplastosForma, #pirenoides").change(function() {
@@ -42,14 +56,19 @@ $(function() {
 
     $('.algaelist').on('click', '.showAlgaeInfo', function () {
         var genero = $(this).data('genero');
-        $('#myModalLabel').text(genero);
+        $('#myModalInfoLabel').text(genero);
 
         $.ajax({
             url: "xhrGetModalBody.php?genero="+genero
         }).done(function(d) {
-            $('.modal-body').html(d);
+            $('#myModalInfoBody').html(d);
         });
 
+        $('#myModalInfo').modal('show');
+    });
+
+    $('#myModalInfoBody').on('click', '.foto', function () {
+        $("#myModalBody").html('<img src="'+$(this).data('imgsrc')+'" class="img-responsive">');
         $('#myModal').modal('show');
     });
 });
