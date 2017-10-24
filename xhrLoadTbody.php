@@ -18,10 +18,14 @@ if (isset($_GET['formaOrganizacion']) && !empty($_GET['formaOrganizacion'])) {
     $sql .= ")";
 }
 if (isset($_GET['formaCelula']) && !empty($_GET['formaCelula'])) {
-    $sql .= " AND (forma_celula_caracter1 LIKE '%".utf8_decode($_GET['formaCelula'])."%'
-        OR forma_celula_caracter2 LIKE '%".utf8_decode($_GET['formaCelula'])."%'
-        OR forma_celula_caracter3 LIKE '%".utf8_decode($_GET['formaCelula'])."%'
-    )";
+    $sql .= " AND (";
+    foreach ($_GET['formaCelula'] as $v) {
+        $sql .= " forma_celula_caracter1 LIKE '%".utf8_decode($v)."%'
+            OR forma_celula_caracter2 LIKE '%".utf8_decode($v)."%'
+            OR forma_celula_caracter3 LIKE '%".utf8_decode($v)."%' OR";
+    }
+    $sql = rtrim($sql, 'OR');
+    $sql .= ")";
 }
 if (isset($_GET['paredCelular']) && !empty($_GET['paredCelular'])) {
     $sql .= " AND pared_celular = '".utf8_decode($_GET['paredCelular'])."'";
