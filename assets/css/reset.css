@@ -1,0 +1,88 @@
+/******************************************************
+
+Theme:           WellDone v.1.5
+Author:          OceanCode
+Support:         http://themeforest.net/user/OceanCode
+
+******************************************************/
+
+
+html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
+tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: middle;
+}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+img{
+	height: auto;
+	display: block;
+}
+div { display: block; }
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	display: table;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	color: #666;
+	width: 100%;
+	display: block;
+}
+ol, ul { list-style: none; }
+p { margin: 0; }
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+span {
+	display: inline-block;
+	webkit-transition: background-image 200ms linear 0ms;
+	-moz-transition: background-image 200ms linear 0ms;
+	-o-transition: background-image 200ms linear 0ms;
+	transition: background-image 200ms linear 0ms;
+}
+a {
+	color: #999;
+	text-decoration: none;
+	webkit-transition: background 600ms, color 300ms, opacity 400ms, box-shadow 300ms, border-color 300ms linear 0ms;
+	-moz-transition: background 600ms, color 300ms, opacity 400ms, box-shadow 300ms, border-color 300ms linear 0ms;
+	-o-transition: background 600ms, color 300ms, opacity 400ms, box-shadow 300ms, border-color 300ms linear 0ms;
+	transition: background 600ms, color 300ms, opacity 400ms, box-shadow 300ms, border-color 300ms linear 0ms;
+    display: inline-block;
+}
+a:hover { color: #749347; }
+strong { font-weight: bold; }
+*:focus { outline: 0; }
+
+::-webkit-input-placeholder { color: #ccc; }
+
+:-moz-placeholder { color: #ccc; }
+::-moz-placeholder { color: #ccc; }
+:-ms-input-placeholder { color: #ccc; }
