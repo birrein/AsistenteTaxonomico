@@ -102,7 +102,7 @@ include('class.algae.php');
     </div>
 
     <div class="col-md-9">
-        <div class="algaelist-title"><h3>G&eacute;nero:</h3></div>
+        <div class="algaelist-title"><h3>G&eacute;nero</h3></div>
         <div class="algaelist"></div>
     </div>
 </div>

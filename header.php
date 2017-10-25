@@ -9,7 +9,7 @@
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-
+        
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -20,7 +20,9 @@
                 <a class="navbar-brand" href="index.php"><img src="http://amakaik.cl/AsistenteTaxonomico/images/logo.png"></a>
             </div>
             <div class="navbar-collapse collapse">
-
+                <ul class="nav navbar-nav">
+                </ul>
+                
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="https://localhost:44380/Account/Register">REGISTRO</a></li>
                     <li><a href="https://localhost:44380/Account/Login">INICIAR SESION</a></li>
