@@ -38,7 +38,7 @@ $diagramas = Algae::getDiagramas($genero);
 <!-- fotos -->
 <div class="panel panel-default" style="margin-top:30px;">
     <div class="panel-heading">
-        <h3 class="panel-title">Fotos:</h3>
+        <h3 class="panel-title">Im&aacute;genes:</h3>
     </div>
     <div class="panel-body">
 <?php

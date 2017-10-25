@@ -126,8 +126,12 @@ include('class.algae.php');
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog full-screen">
-        <div class="modal-content">         
-            <div class="modal-body" id="myModalBody">                
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="close-button">
+                    <button type="button" class="close close-brn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div id="myModalBody"></div>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
