@@ -45,14 +45,20 @@ $diagramas = Algae::getDiagramas($genero);
     </div>
     <div class="panel-body">
 <?php
-        echo '<div class="row">';
+        $i = 0;
         foreach ($fotos as $f) {
             if (strpos($f, "thumbnail")) {
                 continue;
             }
+            if ($i % 4 === 0) {
+                echo '<div class="row">';
+            }
             echo '<div class="col-sm-3" style="margin-bottom:15px;"><a href="javascript:void(0);" class="foto" data-imgsrc="'.$f.'"><img src="'.$f.'" class="img-responsive img-thumbnail"></a></div>';
+            if ($i % 4 === 3) {
+                echo '</div>';
+            }
+            $i++;
         }
-        echo '</div>';
 ?>
     </div>
 </div>
