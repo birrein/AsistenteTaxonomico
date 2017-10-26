@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 23, 2017 at 01:31 PM
+-- Generation Time: Oct 26, 2017 at 11:06 AM
 -- Server version: 5.6.36-cll-lve
 -- PHP Version: 5.6.30
 
@@ -87,30 +87,31 @@ CREATE TABLE `input_data2` (
   `pared_celular_ornamentaciones` text,
   `cloroplastos_n` varchar(64) NOT NULL,
   `cloroplastos_forma` text,
-  `pirenoides` text
+  `pirenoides` text,
+  `citas` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `input_data2`
 --
 
-INSERT INTO `input_data2` (`id`, `genero`, `clase`, `nivel_organizacion`, `forma_organizacion1`, `forma_organizacion2`, `forma_celula_caracter1`, `forma_celula_caracter2`, `forma_celula_caracter3`, `pared_celular`, `pared_celular_ornamentaciones`, `cloroplastos_n`, `cloroplastos_forma`, `pirenoides`) VALUES
-(17, 'Asterionella', 'Bacillariophyceae', 'Colonia', 'Colonia estrellada', NULL, '2 Valvas largas y estrechas', 'Valvas heteropolares, márgenes asimétricos', NULL, 'Sílice', NULL, 'Numerosos', NULL, 'Numerosos'),
-(18, 'Tabellaria', 'Bacillariophyceae', 'Colonia', 'Colonia en zigzag', NULL, '2 Valvas alargadas con extremos capitados', 'Valvas más anchas en el centro que en los extremos.', NULL, 'Sílice', NULL, 'Numerosos', NULL, 'Numerosos'),
-(19, 'Sphaerocystis', 'Chlorophyceae', 'Colonia', 'Colonias tipo cenobio', 'Incrustadas en el mucílago', 'Células globulosas', 'Células agrupada de 2 o 4 ó a menudo en tetraedros regulares en el centro de la colonia', NULL, 'Celulosa', 'Pared celular lisa.', 'Uno', 'Cloroplasto con forma de copa, en ubicación parietal en la célula', 'Con y sin pirenoídes'),
-(20, 'Scenedesmus', 'Chlorophyceae', 'Colonia', 'Colonia tipo cenobio-consorcio', 'Colonias formadas por 4, 8 o 12 células', 'Células terminales con espinas', 'Alargadas, elipsoidales o fusiformes, sin apéndices, casi redondeadas', NULL, 'Celulosa', 'Pared lisa o verrucosa', 'Uno', NULL, 'Uno'),
-(21, 'Ceratium', 'Dinophyceae', 'Solitarias', 'Con teca y cuernos', NULL, 'Célula aplastada', '1 cuerno largo en la epiteca/ 2 ó 3 en la hipoteca', 'Células con cingulo y sulco', 'Celulosa', 'Tecas con placas, poros, lisas a densamente ornamentadas', 'Numerosos', NULL, 'Ausentes'),
-(22, 'Closterium', 'Conjugatophyceae', 'Solitarias', 'Con forma de medialuna', NULL, 'Más largas que anchas, contraídas en la región media', 'Células cilindricas-fusiformes, elongadas', 'Extremos agudos, redondeados o truncados', 'Celulosa', 'Pared lisa o con estrías o costas longitudinales', 'Dos, uno en cada hemicélula', NULL, 'Pocos o varios'),
-(23, 'Cosmarium', 'Conjugatophyceae', 'Solitarias', 'Con hemicélulas', 'Más largas que anchas, contraídas en la región media.', 'Célula con istmo (constricción media profunda)', 'Células sin procesos', 'Hemicélulas de contornos variables, elípticas', 'Celulosa', 'Pared lisa, punctada, excroviculada, verrucosa o papilosa', 'Dos, uno en cada hemicélula', 'Lobulados', 'Uno o dos, de gran tamaño'),
-(24, 'Micrasterias', 'Chlorophyceae', 'Solitarias', 'Con hemicélulas', 'Contorno subcircular, contraídas en la región media.', 'Célula con istmo (constricción media profunda)', 'Más largas que anchas', 'Hemicélulas en general con 5 lóbulos (algunas veces 3)', 'Celulosa', 'Pared lisa o con poros, escrobiculaciones o espinas', 'Dos, uno en cada hemicélula', NULL, 'Varios'),
-(25, 'Staurastrum', 'Conjugatophyceae', 'Solitarias', 'Con hemicélulas', 'Simetría radial y contraídas en la región media.', 'Células generalmente más largas que anchas', 'Con procesos, es decir, con  ápices a veces prolongados en forma de brazos', 'Hemicélulas fusiformes, o poligonales en vista polar', 'Celulosa', 'Pared lisa, punctada, escrobiculada, granulada o con espinas', 'Dos, uno en cada hemicélula', NULL, 'Uno central'),
-(26, 'Melosira', 'Bacillariophyceae', 'Colonia', 'Colonia tipo filamento', 'Con cingulo sobresaliente', '2 valvas cilindricas', 'Células unidas en pares, con poca ornamentación', NULL, 'Sílice', NULL, 'Numerosos', 'Lobulados', 'Ausentes'),
-(27, 'Nostoc', 'Cyanophyceae', 'Colonia', 'Colonia tipo filamento', 'Matriz gelatinosa, grueso', 'Células cilindricas ó con forma de barril', 'Con células vegetativas y heterocistos  terminales o  intercalares', 'Isopolares', 'Ausente', NULL, 'Ausentes', NULL, 'N/A'),
-(28, 'Oscillatoria', 'Cyanophyceae', 'Colonia', 'Colonia tipo filamento', 'Sin matriz gelatinosa', 'Células adyacentes unidas, y células terminales con o sin cofia', 'Células cortas cilíndricas o discoides (siempre más cortas que anchas)', 'Células con granulación fina o con gránulos solitarios', 'Ausente', NULL, 'Ausentes', NULL, 'N/A'),
-(29, 'Ulothrix', 'Ulvophyceae', 'Colonia', 'Colonia tipo filamento', NULL, 'Células uninucleadas, cilindricas', 'Células con diferenciación basal, en algunas especies', NULL, 'Celulosa', 'Pared delgada a gruesa, tabiques en forma de H en sección óptica longitudinal', 'Uno', 'Parietal en forma de anillo que ocupa la mitad o las 3/4 partes de la circunsferencia de la célula.', 'Uno ó muchos'),
-(30, 'Mougeotia', 'Zygnematophyceae', 'Colonia', 'Colonia tipo filamento', NULL, 'Célula alargada, cilindrica', 'Células sin diferenciación basal distal', NULL, 'Celulosa', 'Pared celular con dos capas internas de celulosa', 'Uno', 'Laminar y parietal', 'Numerosos pirenoides distribuidos al azar, ya sea axiales o esparcidos sobre la superficie.'),
-(31, 'Spirogyra', 'Zygnematophyceae', 'Colonia', 'Colonia tipo filamento', NULL, 'Células cilindricas, cortas a muy largas', NULL, NULL, 'Celulosa', NULL, 'Uno a 16', 'Parietales y espiralados', 'Numerosos'),
-(32, 'Zygnema', 'Zygnematophyceae', 'Colonia', 'Colonia tipo filamento', NULL, 'Células  iguales o varias veces mas largas que anchas, cilindricas, cortas o largas', NULL, NULL, 'Celulosa', NULL, 'Dos', 'Estrellados y de posición axial', 'Uno central de gran tamaño');
+INSERT INTO `input_data2` (`id`, `genero`, `clase`, `nivel_organizacion`, `forma_organizacion1`, `forma_organizacion2`, `forma_celula_caracter1`, `forma_celula_caracter2`, `forma_celula_caracter3`, `pared_celular`, `pared_celular_ornamentaciones`, `cloroplastos_n`, `cloroplastos_forma`, `pirenoides`, `citas`) VALUES
+(17, 'Asterionella', 'Bacillariophyceae', 'Colonia', 'Colonia estrellada', NULL, '2 Valvas largas y estrechas', 'Valvas heteropolares, márgenes asimétricos', NULL, 'Sílice', NULL, 'Numerosos', NULL, 'Numerosos', NULL),
+(18, 'Tabellaria', 'Bacillariophyceae', 'Colonia', 'Colonia en zigzag', NULL, '2 Valvas alargadas con extremos capitados', 'Valvas más anchas en el centro que en los extremos.', NULL, 'Sílice', NULL, 'Numerosos', NULL, 'Numerosos', 'Cox 1996'),
+(19, 'Sphaerocystis', 'Chlorophyceae', 'Colonia', 'Colonias tipo cenobio', 'Incrustadas en el mucílago', 'Células globulosas', 'Células agrupada de 2 o 4 ó a menudo en tetraedros regulares en el centro de la colonia', NULL, 'Celulosa', 'Pared celular lisa.', 'Uno', 'Cloroplasto con forma de copa, en ubicación parietal en la célula', 'Relativo', 'Parra & Bicudo 1995'),
+(20, 'Scenedesmus', 'Chlorophyceae', 'Colonia', 'Colonia tipo cenobio-consorcio', 'Colonias formadas por 4, 8 o 12 células', 'Células terminales con espinas', 'Alargadas, elipsoidales o fusiformes, sin apéndices, casi redondeadas', NULL, 'Celulosa', 'Pared lisa o verrucosa', 'Uno', NULL, 'Uno', 'Parra et al. 1983'),
+(21, 'Ceratium', 'Dinophyceae', 'Solitarias', 'Con teca y cuernos', NULL, 'Célula aplastada', '1 cuerno largo en la epiteca, 2 ó 3 en la hipoteca', 'Células con cingulo y sulco', 'Celulosa', 'Tecas con placas, poros, lisas a densamente ornamentadas', 'Numerosos', NULL, 'Ausentes', 'Parra et al. 1982 y Parra & Bicudo 1995'),
+(22, 'Closterium', 'Conjugatophyceae', 'Solitarias', 'Con forma de medialuna', NULL, 'Más largas que anchas, contraídas en la región media', 'Células cilindricas-fusiformes, elongadas', 'Extremos agudos, redondeados o truncados', 'Celulosa', 'Pared lisa o con estrías o costas longitudinales', 'Dos, uno en cada hemicélula', NULL, 'Relativo', 'Pereira et al 1984'),
+(23, 'Cosmarium', 'Conjugatophyceae', 'Solitarias', 'Con hemicélulas', 'Más largas que anchas, contraídas en la región media.', 'Célula con istmo (constricción media profunda)', 'Células sin procesos', 'Hemicélulas de contornos variables, elípticas', 'Celulosa', 'Pared lisa, punctada, excroviculada, verrucosa o papilosa', 'Dos, uno en cada hemicélula', 'Lobulados', 'Pocos', 'Parra et al. 1983'),
+(24, 'Micrasterias', 'Chlorophyceae', 'Solitarias', 'Con hemicélulas', 'Contorno subcircular, contraídas en la región media.', 'Célula con istmo (constricción media profunda)', 'Más largas que anchas', 'Hemicélulas en general con 5 lóbulos (algunas veces 3)', 'Celulosa', 'Pared lisa o con poros, escrobiculaciones o espinas', 'Dos, uno en cada hemicélula', NULL, 'Varios', 'Parra et al. 1983'),
+(25, 'Staurastrum', 'Conjugatophyceae', 'Solitarias', 'Con hemicélulas', 'Simetría radial y contraídas en la región media.', 'Células generalmente más largas que anchas', 'Con procesos, es decir, con ápices a veces prolongados en forma de brazos', 'Hemicélulas fusiformes, o poligonales en vista polar', 'Celulosa', 'Pared lisa, punctada, escrobiculada, granulada o con espinas', 'Dos, uno en cada hemicélula', NULL, 'Uno', 'Pereira et al. 1984'),
+(26, 'Melosira', 'Bacillariophyceae', 'Colonia', 'Colonia tipo filamento', 'Con cingulo sobresaliente', '2 valvas cilindricas', 'Células unidas en pares, con poca ornamentación', NULL, 'Sílice', NULL, 'Numerosos', 'Lobulados', 'Ausentes', 'Rivera et al. 1982'),
+(27, 'Nostoc', 'Cyanophyceae', 'Colonia', 'Colonia tipo filamento', 'Matriz gelatinosa, grueso', 'Células cilindricas ó con forma de barril', 'Con células vegetativas y heterocistos terminales o intercalares', 'Isopolares', 'Ausente', NULL, 'Ausentes', NULL, 'Ausentes', 'Parra et al. 1982 & Prescott G 1951'),
+(28, 'Oscillatoria', 'Cyanophyceae', 'Colonia', 'Colonia tipo filamento', 'Sin matriz gelatinosa', 'Células adyacentes unidas, y células terminales con o sin cofia', 'Células cortas cilíndricas o discoides (siempre más cortas que anchas)', 'Células con granulación fina o con gránulos solitarios', 'Ausente', NULL, 'Ausentes', NULL, 'Ausentes', 'Parra et al. 1982'),
+(29, 'Ulothrix', 'Ulvophyceae', 'Colonia', 'Colonia tipo filamento', NULL, 'Células uninucleadas, cilindricas', 'Células con diferenciación basal, en algunas especies', NULL, 'Celulosa', 'Pared delgada a gruesa, tabiques en forma de H en sección óptica longitudinal', 'Uno', 'Parietal en forma de anillo que ocupa la mitad o las 3/4 partes de la circunsferencia de la célula.', 'Relativo', 'Pereira et al. 1984'),
+(30, 'Mougeotia', 'Zygnematophyceae', 'Colonia', 'Colonia tipo filamento', NULL, 'Célula alargada, cilindrica', 'Células sin diferenciación basal distal', NULL, 'Celulosa', 'Pared celular con dos capas internas de celulosa', 'Uno', 'Laminar y parietal', 'Numerosos', 'Pereira et al. 1984'),
+(31, 'Spirogyra', 'Zygnematophyceae', 'Colonia', 'Colonia tipo filamento', NULL, 'Células cilindricas, cortas a muy largas', NULL, NULL, 'Celulosa', NULL, 'Uno a 16', 'Parietales y espiralados', 'Numerosos', 'Pereira et al. 1984'),
+(32, 'Zygnema', 'Zygnematophyceae', 'Colonia', 'Colonia tipo filamento', NULL, 'Células iguales o varias veces mas largas que anchas, cilindricas, cortas o largas', NULL, NULL, 'Celulosa', NULL, 'Dos', 'Estrellados y de posición axial', 'Uno', 'Pereira et al. 1984');
 
 --
 -- Indexes for dumped tables
