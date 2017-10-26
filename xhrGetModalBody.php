@@ -31,6 +31,9 @@ $diagramas = Algae::getDiagramas($genero);
             echo '<div class="col-sm-3 diagramas" style="margin-bottom:15px;"><a href="javascript:void(0);" class="foto" data-imgsrc="'.$d.'"><img src="'.$d.'" class="img-responsive img-thumbnail"></a></div>';
         }
         echo '</div>';
+        if (!empty($a['citas'])) {
+            echo '<div><em>('.$a['citas'].'.)</em></div>';
+        }
 ?>
     </div>
 </div>
