@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page - AsistenteTaxonomico</title>
+    <title><?=$pageTitle?></title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/magicsuggest-min.css">
     <link rel="stylesheet" href="css/site.css">
@@ -24,8 +24,16 @@
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://localhost:44380/Account/Register">REGISTRO</a></li>
-                    <li><a href="https://localhost:44380/Account/Login">INICIAR SESION</a></li>
+                    <!-- <li><a href="https://localhost:44380/Account/Register">REGISTRO</a></li> -->
+<?php
+session_start();
+if (!isset($_SESSION['Email']) || empty($_SESSION['Email'])) {
+    echo '<li><a href="login.php">INICIAR SESION</a></li>';
+} else {
+    echo '<li><a>'.$_SESSION['Email'].'</a></li>';
+    echo '<li><a href="logout.php">CERRAR SESION</a></li>';
+}
+?>
                 </ul>
 
             </div>

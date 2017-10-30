@@ -1,6 +1,11 @@
 <?php
+$pageTitle = 'Inicio - Asistente Taxonómico de Microalgas';
 include('header.php');
 include('class.algae.php');
+if (!isset($_SESSION['Email']) || empty($_SESSION['Email'])) {
+    header("Location: login.php");
+    exit();
+}
 ?>
 
 <div class="row" style="margin-top:30px;">
